@@ -27,6 +27,15 @@ class ImageProcessor:
             print(data_point + "\n")
 
     def crop(self):
+        """
+        Crop the image, i.e. shrink the image down to the smallest
+        rectangular area.
+
+        Basically, it takes a few steps:
+        1. Get the first and last line in which the string is not pure space.
+        2. Get the most left and most right position indices.
+        3. Crop based on the four indices.
+        """
         data_to_process = self.data
         indexes_list = [[(i, s) for i, s in enumerate(sss) if s.strip()]
                         for sss in data_to_process]
