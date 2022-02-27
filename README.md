@@ -15,6 +15,7 @@ Do the following:
 
 ``from image_processor import ImageProcessor
 ``
+
 ``image = ImageProcessor(url="your-url")``
 
 
